@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -41,3 +44,11 @@ jobs:
         with:
           name: DeeniNasiha-apk
           path: app/build/outputs/apk/release/*.apk
+
+      - name: Publish APK as a GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/release/app-release.apk DeeniNasiha.apk
+          TAG="v1.0.${{ github.run_number }}"
+          gh release create "$TAG" DeeniNasiha.apk --title "দ্বীনি নসিহা $TAG" --notes "Android APK (build #${{ github.run_number }})"
