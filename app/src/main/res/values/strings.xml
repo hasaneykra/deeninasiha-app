@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">দ্বীনি নসিহা</string>
+    <string name="tab_home">হোম</string>
+    <string name="tab_tools">টুলস</string>
+    <string name="tab_prayer">নামাজ</string>
+    <string name="tab_search">খুঁজুন</string>
+    <string name="tab_share">শেয়ার</string>
+    <string name="search_title">খুঁজুন</string>
+    <string name="search_hint">বিষয় বা শব্দ লিখুন</string>
+    <string name="search_go">খুঁজুন</string>
+    <string name="cancel">বাতিল</string>
+    <string name="share_via">শেয়ার করুন</string>
+</resources>
